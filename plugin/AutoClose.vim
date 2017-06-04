@@ -475,8 +475,8 @@ function! s:CreateExtraMaps()
         endfor
 
         " Flush the char buffer on mouse click:
-        inoremap <buffer> <silent> <LeftMouse>  <C-R>=<SID>FlushBuffer()<CR><LeftMouse>
-        inoremap <buffer> <silent> <RightMouse> <C-R>=<SID>FlushBuffer()<CR><RightMouse>
+        "inoremap <buffer> <silent> <LeftMouse>  <C-R>=<SID>FlushBuffer()<CR><LeftMouse>
+        "inoremap <buffer> <silent> <RightMouse> <C-R>=<SID>FlushBuffer()<CR><RightMouse>
     endif
 endfunction
 
@@ -509,7 +509,7 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let s:AutoClosePairs_FactoryDefaults = AutoClose#ParsePairs("() {} [] ` \" '")
+let s:AutoClosePairs_FactoryDefaults = AutoClose#ParsePairs("() {} [] \" '")
 if !exists("g:AutoClosePairs_add") | let g:AutoClosePairs_add = "" | endif
 if !exists("g:AutoClosePairs_del") | let g:AutoClosePairs_del = "" | endif
 if !exists("g:AutoClosePairs")
@@ -519,7 +519,8 @@ if !exists("g:AutoClosePairs")
                 \ g:AutoClosePairs_del )
 endif
 
-let s:movementKeys = split('ESC UP DOWN LEFT RIGHT HOME END PAGEUP PAGEDOWN')
+"let s:movementKeys = split('ESC UP DOWN LEFT RIGHT HOME END PAGEUP PAGEDOWN')
+let s:movementKeys = split('')
 " list of keys that get mapped to themselves for pumvisible()
 let s:pumMovementKeys = split('UP DOWN PAGEUP PAGEDOWN')
 
